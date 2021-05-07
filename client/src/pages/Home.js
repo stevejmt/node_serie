@@ -22,17 +22,6 @@ axios.delete(`http://localhost:3001/posts/${id}`)
       });
   };
 
-  const updatePost = (id) => {
-    axios.delete(`http://localhost:3001/posts/${id}`)
-          .then(() => {
-            setListOfPosts(
-              listOfPosts.filter((value) => {
-                return value.id != id;
-              })
-            );
-          });
-      };
-
   useEffect(() => {
     axios.get("http://localhost:3001/posts").then((response) => {
       setListOfPosts(response.data);
