@@ -31,14 +31,14 @@ axios.delete(`http://localhost:3001/posts/${id}`)
   return (
     <div>
         <div className="filtre">
-      <input class="searchbar" type="text" role="search"
+      <input className="searchbar" type="text" role="search"
                placeholder="Rechercher par nom..."
                onChange={event => {
                 setSearchTerm(event.target.value);
         }}
         />
 
-      <select class="filterCategory"
+      <select className="filterCategory"
       placeholder="Choissisez une catégorie"
       onChange={event => {
         setCategoryTerm(event.target.value);
@@ -63,8 +63,8 @@ axios.delete(`http://localhost:3001/posts/${id}`)
         return (
           <div className="post">
             <div className="title"> {value.nom_serie} - {value.cat_serie}
-              <a aria-label="Modifier" onClick={() => {history.push(`/edit/${value.id}`)}}><img class="icon" id="edit" aria-hidden="true" alt="icone modifier" src="https://cdn1.iconfinder.com/data/icons/feather-2/24/edit-512.png"/><span class="accessible-hidden"> Modifier </span> </a>
-              <a aria-label="Supprimer" onClick={() => deletePost(value.id)}> <img class="icon" id="delete" aria-hidden="true" alt="icone supprimer" src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/delete-512.png"/><span class="accessible-hidden"> Supprimer </span> </a>
+              <a aria-label="Modifier" onClick={() => {history.push(`/edit/${value.id}`)}}><img className="icon" id="edit" aria-hidden="true" alt="icone modifier" src="https://cdn1.iconfinder.com/data/icons/feather-2/24/edit-512.png"/><span class="accessible-hidden"> Modifier </span> </a>
+              <a aria-label="Supprimer" onClick={() => deletePost(value.id)}> <img className="icon" id="delete" aria-hidden="true" alt="icone supprimer" src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/delete-512.png"/><span class="accessible-hidden"> Supprimer </span> </a>
             </div>
             <div className="body"><img src={`http://localhost:3001/${value.image}`}/></div>
             <div className="footer">Nombre de saisons : {value.nb_saison}</div>

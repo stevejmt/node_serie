@@ -45,7 +45,7 @@ return (
         initialValues={initialValues}
         onSubmit={() => {
 
-      
+          console.log(postObject)
           axios.put(`http://localhost:3001/posts/update/${postObject.id}`, postObject).then(() => window.location = "/") // Redirect après post
         }
       }

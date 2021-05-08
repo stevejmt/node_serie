@@ -20,7 +20,6 @@ router.post("/", upload.single("image"), async (req, res) => {
     }
 
     await Posts.create(data);
-
     res.status(203).json();
 });
 

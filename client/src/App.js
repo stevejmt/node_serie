@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <Router>
         <div className="navbar" role="navigation">
-        <Link to="/" tabindex="1"> Home</Link>  
-        <Link to="/createpost" tabindex="2"> Créer une série</Link>
+        <Link to="/" tabIndex="1"> Home</Link>  
+        <Link to="/createpost" tabIndex="2"> Créer une série</Link>
         </div>
 
         <Switch>

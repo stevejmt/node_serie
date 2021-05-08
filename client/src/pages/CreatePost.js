@@ -36,7 +36,6 @@ const CreatePost=() =>  {
                   'content-type': 'multipart/form-data'
               }
           };
-
           axios.post("http://localhost:3001/posts",formData,config).then(() => window.location = "/") // Redirect après post
         }
       }
