@@ -12,8 +12,7 @@ const EditPost = () => {
       cat_serie: '',
       nb_saison: '',
       fetched : ''
-    }); // empty object
-
+    }); 
 
     useEffect(() => {
         if (postObject.fetched !== '') return;
@@ -24,7 +23,6 @@ const EditPost = () => {
             setPostObject(response.data);
             });
         });
-
 
     const initialValues = {
         nom_serie: "",
@@ -37,7 +35,6 @@ const EditPost = () => {
         cat_serie: Yup.string(),
         nb_saison: Yup.number("Que des chiffres").min(1).max(99),
       });
-
 
 return (
  <div className="createPostPage">

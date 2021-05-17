@@ -1,6 +1,5 @@
 // call framework express
 const express = require('express');
-const path = require("path")
 // initialize for api request, init server
 const app = express();
 
