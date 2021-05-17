@@ -66,7 +66,7 @@ axios.delete(`http://localhost:3001/posts/${id}`)
               <a aria-label="Modifier" onClick={() => {history.push(`/edit/${value.id}`)}}><img className="icon" id="edit" aria-hidden="true" alt="icone modifier" src="https://cdn1.iconfinder.com/data/icons/feather-2/24/edit-512.png"/><span class="accessible-hidden"> Modifier </span> </a>
               <a aria-label="Supprimer" onClick={() => deletePost(value.id)}> <img className="icon" id="delete" aria-hidden="true" alt="icone supprimer" src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/delete-512.png"/><span class="accessible-hidden"> Supprimer </span> </a>
             </div>
-            <div className="body"><img src={`http://localhost:3001/${value.image}`}/></div>
+            <div className="body"><img src={`http://localhost:3001/${value.image}`} alt={`image de ${value.nom_serie}`}/></div>
             <div className="footer">Nombre de saisons : {value.nb_saison}</div>
           </div>
         );
